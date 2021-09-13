@@ -6,6 +6,9 @@ const Home = () => {
   return (
     <div className="App">
       <Topics />
+      <section className="article-summary-list"> 
+      
+      </section>
     </div>
   );
 }
