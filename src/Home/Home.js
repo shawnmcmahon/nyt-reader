@@ -1,12 +1,11 @@
 import React from 'react';
+import Topics from './Topics/Topics'
 import './Home.css';
 
 const Home = () => {
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
+      <Topics />
     </div>
   );
 }
