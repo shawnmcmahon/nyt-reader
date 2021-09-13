@@ -9,19 +9,21 @@ const App = () => {
 
 
   useEffect(()=> {
-      getArticles('home')
+      getArticlesByTopic(currentTopic)
+      console.log('all articles', allArticles)
+  }, [])
+
+  const getArticlesByTopic = (topic) => {
+    getArticles(topic)
         .then(data => {
           const articles = data.results;
           setAllArticles((prevState) => ({...prevState, articles}))
         })
-    console.log('allArticles', allArticles)
-
-  }, [])
+  }
   
 
   return (
     <div className="App">
-      <Topics />
       <section className="article-summary-list"> 
 
       </section>
