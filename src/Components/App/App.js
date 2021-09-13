@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Topics from '../Topics/Topics'
 import { getArticles } from '../../utlities/apiCalls';
 import './App.css';
 
