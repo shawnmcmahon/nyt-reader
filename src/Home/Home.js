@@ -1,5 +1,5 @@
 import React from 'react';
-import Topics from './Topics/Topics'
+import Topics from '../Topics/Topics'
 import './Home.css';
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
     <div className="App">
       <Topics />
       <section className="article-summary-list"> 
-      
+
       </section>
     </div>
   );
