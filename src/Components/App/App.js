@@ -4,23 +4,46 @@ import Summary from '../Summary/Summary';
 import './App.css';
 
 const App = () => {
-  const [topics, setTopics] = useState(['arts', 'automobiles', 'books', 'business', 'fashion', 'food', 'health', 'home', 'insider', 'magazine', 'movies', 'nyregion', 'obituaries', 'opinion', 'politics', 'realestate', 'science', 'sports', 'sundayreview', 'technology', 'theater', 't-magazine', 'travel', 'upshot', 'us', 'world'])
+  const [topics, setTopics] = useState(['arts', 'home', 'science', 'us', 'world'])
   const [currentTopic, setCurrentTopic] = useState('home');
   const [allArticles, setAllArticles] = useState([]);
+  const [homeArticles, setHomeArticles] = useState([]);
+  const [artArticles, setArtArticles] = useState([]);
+  const [scienceArticles, setScienceArticles] = useState([]);
+  const [usArticles, setUsArticles] = useState([]);
+  const [worldArticles, setWorldArticles] = useState([]);
 
 
   useEffect(()=> {
       getArticlesByTopic(currentTopic)
-      console.log('all articles', allArticles)
   }, [])
 
   const getArticlesByTopic = (topic) => {
-    getArticles(topic)
+    getArticles('home')
         .then(data => {
           const articles = data.results;
-          setAllArticles((prevState) => ({...prevState, articles}))
+          setHomeArticles((prevState) => ({ ...prevState, articles }))
         })
-    setCurrentTopic(topic)
+    getArticles('arts')
+      .then(data => {
+        const articles = data.results;
+        setArtArticles((prevState) => ({ ...prevState, articles }))
+      })
+    getArticles('science')
+      .then(data => {
+        const articles = data.results;
+        setScienceArticles((prevState) => ({ ...prevState, articles }))
+      })
+    getArticles('us')
+      .then(data => {
+        const articles = data.results;
+        setUsArticles((prevState) => ({ ...prevState, articles }))
+      })
+    // getArticles('world')
+    // .then(data => {
+    //   const articles = data.results;
+    //   setUsArticles((prevState) => ({ ...prevState, articles }))
+    // })
   }
 
   const displayArticlesByTopic = () => {
@@ -64,7 +87,7 @@ const App = () => {
         {mapTopicsToButtons()}
       </section>
       <section className="article-summary-container">
-        {displayArticlesByTopic()}
+        {displayArticlesByTopic}
       </section>
     </div>
   );
