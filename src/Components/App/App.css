@@ -50,4 +50,10 @@ button {
   align-self: center;
 }
 
+.article-summary {
+  border: 3px solid black;
+  width: 100%;
+  height: 5vh;
+}
+
 

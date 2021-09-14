@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getArticles } from '../../utlities/apiCalls';
+import Summary from '../Summary/Summary';
 import './App.css';
 
 const App = () => {
@@ -23,14 +24,28 @@ const App = () => {
   }
 
   const displayArticlesByTopic = () => {
-
+    // getArticlesByTopic(currentTopic)
+    console.log('all articles in function', allArticles)
+    const articleSummaries = allArticles.articles.map(currentArticle => {
+        return (
+          <Summary 
+            currentArticle={currentArticle}
+            key={currentArticle} />
+        )
+      })
+    console.log('allArticles now', allArticles)
+    return articleSummaries;
   }
 
   const mapTopicsToButtons = () => {
     const buttons = topics.map(currentTopic => {
       return (
-        <button className="topic" key={currentTopic}
-        onClick={displayArticlesByTopic}>
+        <button 
+          className="topic" 
+          id={currentTopic} 
+          key={currentTopic}
+          onClick={(e) => setCurrentTopic(e.target.id)}
+        >
           #{currentTopic}
         </button>
       )
@@ -49,7 +64,7 @@ const App = () => {
         {mapTopicsToButtons()}
       </section>
       <section className="article-summary-container">
-        
+        {displayArticlesByTopic()}
       </section>
     </div>
   );
