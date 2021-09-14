@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Nav from '../Nav/Nav';
 import { getArticles } from '../../utlities/apiCalls';
 import './App.css';
 
@@ -25,7 +26,7 @@ const App = () => {
   return (
     <div className="App">
       <section className="article-summary-list"> 
-
+      <Nav />
       </section>
     </div>
   );
