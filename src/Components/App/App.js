@@ -19,15 +19,29 @@ const App = () => {
           const articles = data.results;
           setAllArticles((prevState) => ({...prevState, articles}))
         })
+    setCurrentTopic(topic)
+  }
+
+  const mapTopicsToButtons = () => {
+    const buttons = topics.map(currentTopic => {
+      return (
+        <button className="topic" key={currentTopic}>
+          #{currentTopic}
+        </button>
+      )
+    })
+
+    return buttons
   }
   
 
   return (
     <div className="App">
-      <section className="article-summary-list"> 
-      <header className="header"> 
+      <header className="App-header"> 
         NYTimes Reader
       </header>
+      <section className="topic-buttons-container">
+        {mapTopicsToButtons()}
       </section>
     </div>
   );
