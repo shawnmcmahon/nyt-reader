@@ -27,6 +27,9 @@ const App = () => {
     <div className="App">
       <section className="article-summary-list"> 
       <Nav />
+      <header className="header"> 
+        NYTimes Reader
+      </header>
       </section>
     </div>
   );
