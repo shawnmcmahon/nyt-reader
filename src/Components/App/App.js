@@ -1,3 +1,4 @@
+import { getAllByPlaceholderText } from '@testing-library/react';
 import React, { useEffect, useState } from 'react';
 import { getArticles } from '../../utlities/apiCalls';
 import Summary from '../Summary/Summary';
@@ -7,53 +8,46 @@ const App = () => {
   const [topics, setTopics] = useState(['arts', 'home', 'science', 'us', 'world'])
   const [currentTopic, setCurrentTopic] = useState('home');
   const [allArticles, setAllArticles] = useState([]);
-  const [homeArticles, setHomeArticles] = useState([]);
-  const [artArticles, setArtArticles] = useState([]);
-  const [scienceArticles, setScienceArticles] = useState([]);
-  const [usArticles, setUsArticles] = useState([]);
-  const [worldArticles, setWorldArticles] = useState([]);
+  // const [homeArticles, setHomeArticles] = useState([]);
+  // const [artArticles, setArtArticles] = useState([]);
+  // const [scienceArticles, setScienceArticles] = useState([]);
+  // const [usArticles, setUsArticles] = useState([]);
+  // const [worldArticles, setWorldArticles] = useState([]);
 
 
-  useEffect(()=> {
-      getArticlesByTopic(currentTopic)
-  }, [])
+  // useEffect(()=> {
+  //     getArticlesByTopic(currentTopic)
+  // }, [])
+
+  useEffect(() => {
+    const retrieveArticles = async topic => {
+      try {
+        let data = await getArticlesByTopic(topic)
+        setAllArticles(data)
+      } catch (error) {
+        console.log('error')
+      }
+    }
+
+    retrieveArticles(currentTopic)
+  } , [currentTopic])
 
   const getArticlesByTopic = (topic) => {
     getArticles('home')
         .then(data => {
           const articles = data.results;
-          setHomeArticles((prevState) => ({ ...prevState, articles }))
+          setAllArticles((prevState) => ({ ...prevState, articles }))
         })
-    getArticles('arts')
-      .then(data => {
-        const articles = data.results;
-        setArtArticles((prevState) => ({ ...prevState, articles }))
-      })
-    getArticles('science')
-      .then(data => {
-        const articles = data.results;
-        setScienceArticles((prevState) => ({ ...prevState, articles }))
-      })
-    getArticles('us')
-      .then(data => {
-        const articles = data.results;
-        setUsArticles((prevState) => ({ ...prevState, articles }))
-      })
-    // getArticles('world')
-    // .then(data => {
-    //   const articles = data.results;
-    //   setUsArticles((prevState) => ({ ...prevState, articles }))
-    // })
   }
 
   const displayArticlesByTopic = () => {
     // getArticlesByTopic(currentTopic)
     console.log('all articles in function', allArticles)
-    const articleSummaries = allArticles.articles.map(currentArticle => {
+    const articleSummaries = allArticles.articles.map((currentArticle, index) => {
         return (
           <Summary 
             currentArticle={currentArticle}
-            key={currentArticle} />
+            key={index} />
         )
       })
     console.log('allArticles now', allArticles)

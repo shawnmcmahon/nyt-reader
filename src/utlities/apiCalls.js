@@ -1,19 +1,9 @@
 export const getArticles = async topic => {
-  const key = process.env.REACT_APP_API_KEY;
-  let response = await fetch(
-    `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=${key}`
-  );
-  let data = await checkResponse(response)
-};
-
-
-export const fetchTopStories = async section => {
   let key = process.env.REACT_APP_API_KEY;
   let response = await fetch(
-    `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=jyXldoVNm1aCjKzPnNUAh7YjrWuiZMZB`
+    `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=jyXldoVNm1aCjKzPnNUAh7YjrWuiZMZB`
   );
-  let data = await checkForErrors(response);
-  return await cleanData(data);
+  return await checkResponse(response)
 };
 
 const checkResponse = response => {
@@ -26,4 +16,4 @@ const checkResponse = response => {
   } else {
     throw new Error('Error. Please try again later');
   }
-};
+}
