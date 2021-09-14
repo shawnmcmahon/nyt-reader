@@ -22,10 +22,15 @@ const App = () => {
     setCurrentTopic(topic)
   }
 
+  const displayArticlesByTopic = () => {
+
+  }
+
   const mapTopicsToButtons = () => {
     const buttons = topics.map(currentTopic => {
       return (
-        <button className="topic" key={currentTopic}>
+        <button className="topic" key={currentTopic}
+        onClick={displayArticlesByTopic}>
           #{currentTopic}
         </button>
       )
@@ -42,6 +47,9 @@ const App = () => {
       </header>
       <section className="topic-buttons-container">
         {mapTopicsToButtons()}
+      </section>
+      <section className="article-summary-container">
+        
       </section>
     </div>
   );
