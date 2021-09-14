@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.App-header {
+  color: #282c34;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.topic-buttons-container {
+  border: 3px solid black;
+  width: 66vw;
+  height: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+
+}
+
+button {
+  border: none;
+}
+
+.topic {
+  background-color: red;
+  color: white;
+  height: 3em;
+}
+
+.article-summary-container {
+  border: 3px solid black;
+  width: 66vw;
+  height: 55vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+}
+
+.article-summary {
+  border: 3px solid black;
+  width: 100%;
+  height: 5vh;
+}
+
+
