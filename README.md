@@ -53,8 +53,9 @@ To be added when application is complete.
 
   
 # Future Features 
- - 
- 
+ - Implement additional NYT Times APIs besides Top Stories 
+ - Implement APIs from news sources
+ - Dark Mode
   
 # Contributors
  <table>
