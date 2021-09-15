@@ -13,7 +13,7 @@
 
 ## Overview
 
-Turing students obtain a lot of knowledge about coding and the world of software development during their time here. As we have brought on more knowledge and the projects become more complicated, we've noticed one thing: we don't have a single resource at our finger tips to keep track of all things project related. We spend hours sorting through tabs, looking back into Slack message history, all to find the links and documents necessary for our project. CodeHerd is our solution. CodeHerd is a project management app where Turing students can store all the links to their projects. They can keep track of project collaborators and resources they may use for each individual project. And they can go back in time to view resources they have collected for previous projects. While this original version of CodeHerd is simple in its execution, it holds the promise of becoming a robust application that is the answer to many Turing student needs. 
+The mission for this project was to build to a New York Times News Reader app within 8 hours. The application utilizes the New York Times Top Stories API. Users can pick from a selection of Top Story categories and see a summary view of the top stories from that day. Each summary leads to a detailed article view where more information is available about that story. User's are able to navigate to that New York Times article directly from the app to read the entire story. 
 
 # Learning Goals
   * Create a functional news reader app within 8 hours
