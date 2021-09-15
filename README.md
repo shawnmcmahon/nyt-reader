@@ -6,7 +6,6 @@
 - [Instructions for Viewing](#instructions-for-viewing)
 - [Walkthrough](#walkthrough)
 - [Tech Stack](#tech-stack)
-- [Libraries & Other Technology](#libraries-&-other-technology)
 - [Future Features](#future-features)
 - [Contributors](#contributors)
 
@@ -28,7 +27,11 @@ The mission for this project was to build to a New York Times News Reader app wi
 
 
 # Walkthrough
-   
+ 1. In your desired directory, type ```git clone git@github.com:shawnmcmahon/nyt-reader.git```  
+ 2. ```cd``` into 'nyt-reader' 
+ 3. Type ```npm install```
+ 4. Type ```npm start```. 
+ 5. Program will open inside the browser at http://localhost:3000/ 
  
   
 # Tech Stack
@@ -47,11 +50,10 @@ The mission for this project was to build to a New York Times News Reader app wi
   </tr>
 </table>
   
- # Libraries & Other Technology
 
   
 # Future Features 
- 
+ - 
  
   
 # Contributors
