@@ -1,4 +1,4 @@
-# CodeHerd
+# NYT Reader
 
 ### Table of Contents
 - [Overview](#overview)
