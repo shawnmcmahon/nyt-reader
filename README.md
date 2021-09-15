@@ -22,17 +22,17 @@ The mission for this project was to build to a New York Times News Reader app wi
   
 # Instructions for Viewing
 
- View the deployed application via Heroku [here](https://codeherd.herokuapp.com/)
-  
-
-
-# Walkthrough
  1. In your desired directory, type ```git clone git@github.com:shawnmcmahon/nyt-reader.git```  
  2. ```cd``` into 'nyt-reader' 
  3. Type ```npm install```
  4. Type ```npm start```. 
  5. Program will open inside the browser at http://localhost:3000/ 
  
+
+# Walkthrough
+
+To be added when application is complete.
+
   
 # Tech Stack
 <table>
