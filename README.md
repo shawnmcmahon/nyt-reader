@@ -16,12 +16,10 @@
 Turing students obtain a lot of knowledge about coding and the world of software development during their time here. As we have brought on more knowledge and the projects become more complicated, we've noticed one thing: we don't have a single resource at our finger tips to keep track of all things project related. We spend hours sorting through tabs, looking back into Slack message history, all to find the links and documents necessary for our project. CodeHerd is our solution. CodeHerd is a project management app where Turing students can store all the links to their projects. They can keep track of project collaborators and resources they may use for each individual project. And they can go back in time to view resources they have collected for previous projects. While this original version of CodeHerd is simple in its execution, it holds the promise of becoming a robust application that is the answer to many Turing student needs. 
 
 # Learning Goals
-  * Demonstrate working knowledge of functional components with hooks
-  * Work in conjunction with a backend team to build a full project from the ground up
+  * Create a functional news reader app within 8 hours
   * Build upon the foundational skills of React  
   * Utilizes React Router for url navigation
-  * Utilize graphQL to query and mutate data on the backend
-  * Testing performed with Cypress to better understand asynch JS
+  * Implement client-side testing with Cypress
   
 # Instructions for Viewing
 
