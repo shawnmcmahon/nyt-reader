@@ -65,4 +65,4 @@ Turing students obtain a lot of knowledge about coding and the world of software
 </table>
   
   
-A Mod 4 Capstone Project with Turing School of Software & Design 
+A Mod 4 Project for Turing School of Software & Design 
